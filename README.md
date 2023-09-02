@@ -10,8 +10,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae non quae bea
 
 ## Equipe
 
-Ecthor Kaoã Nunes da Silva  
-Otávio Augusto Silva Pereira  
+[Ecthor Kaoã Nunes da Silva](https://github.com/EcthorSilva)  
+[Otávio Augusto Silva Pereira](https://github.com/0tav10280818)  
+
+
 
 ### Funcionalidades
 
