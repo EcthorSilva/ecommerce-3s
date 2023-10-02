@@ -241,15 +241,49 @@ a.logo {
 /* End Banner Two */
 
 .custom-modal .modal-dialog {
+    min-width: 500px; /* Define a largura mínima do modal */
     max-width: 800px; /* Define a largura máxima do modal */
     min-height: 500px; /* Define a altura mínima do modal */
-    max-height: 800px;
+    max-height: 800px; /* Define a altura máxima do modal */
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .custom-modal .modal-dialog {
+        min-width: 100px; /* Define a largura mínima do modal */
+        max-width: 800px; /* Define a largura máxima do modal */
+        min-height: 500px; /* Define a altura mínima do modal */
+        max-height: 800px; /* Define a altura máxima do modal */
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .custom-modal .modal-content {
     height: auto; /* Garante que o conteúdo do modal se ajuste à altura */
+    width:auto; /* Garante que o conteúdo do modal se ajuste à altura */
 }
 
 .custom-modal .modal-body {
     overflow-y: auto; /* Adiciona rolagem vertical caso o conteúdo seja muito longo */
 }
+
+/* alert */
+
+.alert {
+    position: relative;
+    padding: 10px 10px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert p{
+    color: black;
+}
+
+/* .text-muted{
+    visibility: hidden;
+} */
