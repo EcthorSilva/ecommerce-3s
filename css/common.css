@@ -16,7 +16,7 @@
     --link-color: #1a1a1a;
     --primary: #fddde4;
     --light-green: #cdebbc;
-    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
     --box-shadow1: 20px 20px 34px rgba(0, 0, 0, 0.03);
     --text-shadow: 1px 1px 2.5px rgb(48, 48, 48);
     --border-color: #efefef;
@@ -24,6 +24,23 @@
     --section-padding: 40px;
 }
 /* End Variables */
+
+/* Scrollbars */
+*::-webkit-scrollbar-track {
+    /* cor e reio da faixa da barra de rolagem */
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar {
+    /* Largura e altura da barra de rolagem */
+    width: 6px;
+    background-color: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+    /* Cor e raio do "polegar" da barra de rolagem */
+    background-color: #88888881;
+    border-radius: 35px;
+}
+
 /* Start Global Rules */
 * {
     margin: 0;
@@ -126,7 +143,7 @@ p {
 /* Start Header */
 header {
     width: 100%;
-    background-color: var(--main-alt-color);
+    background-color: var(--white-color);
     box-shadow: var(--box-shadow);
     padding: 10px 0;
     position: fixed;
@@ -182,7 +199,7 @@ header .container nav .menu-links {
     }
 }
 header .container nav .menu-links .nav-item {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 @media (max-width: 991px) {
     header .container nav .menu-links .nav-item {
@@ -194,7 +211,7 @@ header .container nav .menu-links .nav-item {
 }
 header .container nav .menu-links .nav-item .nav-link {
     font-size: 16px;
-    font-weight: 600;
+    /* font-weight: 600; */
     color: var(--link-color);
     transition: var(--transition);
     position: relative;
