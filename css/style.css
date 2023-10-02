@@ -154,7 +154,7 @@ a.logo {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 70px 30px;
+    padding: 50px 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -167,10 +167,6 @@ a.logo {
 .banner .container .img-two {
     background-image: url("../assets/images/banner/b10.png");
 
-}
-
-.banner .container .img-two p{
-    
 }
 .banner .container .img-one p,
 .banner .container .img-two p {
@@ -233,9 +229,10 @@ a.logo {
 }
 .banner-two .container .img .text h2 {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: -1px;
     color: var(--white-color);
+
 }
 .banner-two .container .img .text h3 {
     font-size: 25px;
@@ -243,5 +240,16 @@ a.logo {
 }
 /* End Banner Two */
 
+.custom-modal .modal-dialog {
+    max-width: 800px; /* Define a largura máxima do modal */
+    min-height: 500px; /* Define a altura mínima do modal */
+    max-height: 800px;
+}
 
+.custom-modal .modal-content {
+    height: auto; /* Garante que o conteúdo do modal se ajuste à altura */
+}
 
+.custom-modal .modal-body {
+    overflow-y: auto; /* Adiciona rolagem vertical caso o conteúdo seja muito longo */
+}
