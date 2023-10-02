@@ -2,36 +2,483 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/style.css">
+        <title>Kilobyte</title>
+        <!-- FontAwesome Libirary CSS -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- Main Common File -->
+        <link rel="stylesheet" href="css/common.css" />
+        <!-- Main File For CSS -->
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
+        <!-- Import JQuery -->
+		<script type="text/javascript" src="vendor/jquery/jquery-3.6.4.min.js"></script>
+        <!-- BACKGROUND VIDEO -->
+        <div class="video_wrap">
+			<div id="video-viewport">
+				<video class="video-file" preload="" loop="" autobuffer="" autoplay="" muted="" width="1920" height="1080">
+					<source src="video/working.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<!-- SCRIPT BACKGROUND VIDEO-->
+		<script type="text/javascript" src="vendor/js/background-video.js"></script>
+        <!-- Start Header -->
         <header>
             <div class="container">
-                <a class="logo" href="#">&nbsp;</a>
+                <a class="logo">&nbsp;</a>
                 <nav>
                     <ul class="menu-links">
+                        <a class="mark" href="#"><i class="fa-solid fa-xmark fa-lg fa-fw"></i></a>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA5UlEQVR4nN2UsQ7BUBSGPwsGAxEziweQiGdQEpNX8QzSd5B0EJ7AKGG3moytCSPBQKXJGZpI6tzmVsKX3O075z+3PS38C08glONlEfCIBdyAGhmxiAWlPaukgJ6FgG1SQA7YiRiFaSkDR6kbfJJHIkaPS4srNWuNXAEusllNhd8AruK3tRN5MpGrcOfiTjGgJUUnoJjgdWTy6AZ1DNkYbM7YtHkVOCgaR5PPgIJpwEQaLGV1rVKS38VduUXG5IFzyq9YzVD5DsK0AZnTB/ZAADgWvDeC2LV9C973Axwp9oGuBe+HeQGdhY4nafPkOQAAAABJRU5ErkJggg==">
-                            </a>
+                            <a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
                         </li>
                     </ul>
+                    <a class="cart-icon" href="cart.html"><i class="fa-solid fa-bag-shopping fa-lg fa-fw"></i></a>
+                    <a class="menu-bars" href="#"><i class="fa-solid fa-outdent fa-lg fa-fw"></i></a>
                 </nav>
             </div>
         </header>
+        <!-- End Header -->
+        <!-- Start Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h4>Um oferecimento</h4>
+                <h1>Kilobyte</h1>
+                <p>Todo os dias ofertas imperdíveis para você!</p>
+            </div>
+        </section>
+        <!-- End Hero Section -->
+        <!-- Start Banner -->
+        <section class="banner">
+            <div class="container">
+                <div class="img-one">
+                    <p>Oferta</p>
+                    <h4>Placa de Vídeo</h4>
+                    <p>até <strong>10x</strong> sem juros no cartão</p> 
+                    <button class="btn-custum">Acesse aqui!</button>
+                </div>
+                <div class="img-two">
+                    <p>Oferta</p>
+                    <h4>Monitores e Perifericos Redragon</h4>
+                    <p>a partir de 199,99</p>
+                    <button class="btn-custum">Compre agora</button>
+                </div>
+            </div>
+        </section>
+        <!-- End Banner -->
+        <!-- Start Featured Products -->
+        <section class="featured-products">
+            <div class="main-title">
+                <h2>PRODUTOS EM DESTAQUE</h2>
+                <p>Venha ver algumas de nossas ofertas</p>
+            </div>
+            <div class="container">
+                <div class="product">
+                    <img src="assets/images/products/p1.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Games</p>
+                        <h4>Console Sony Playstation 5</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.719,90</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p2.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Processador AMD Ryzen 5 5600G</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 779,31</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p3.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Periféricos</p>
+                        <h4>Headset Gamer HyperX Cloud II</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 699,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p4.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Processador AMD Ryzen 9 5900X</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.599,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p5.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Placa Mãe MSI, Intel LGA 1700</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 769,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p6.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Computadores</p>
+                        <h4>Notebook Asus VivoBook 15 Intel Core i5-1135G7</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.443,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p7.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Fonte Corsair CV750 750W</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 599,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p8.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Computadores</p>
+                        <h4>Monitor Gamer LG 27 Full HD, IPS, HDMI</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 849,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Featured Products -->
+        <!-- Start Calling Section -->
+        <section class="calling">
+            <h4>Games</h4>
+            <h2>Até <span>10X</span> sem juros no cartão</h2>
+            <button class="btn-custum">Acesse aqui</button>
+        </section>
+        <!-- End Calling Section -->
+        <!-- Start Arrivals Section -->
+        <section class="arrivals">
+            <div class="main-title">
+                <h2>Novas adições</h2>
+                <p>Procuramos trazer sempre os melhores produtos</p>
+            </div>
+            <div class="container">
+                <div class="product">
+                    <img src="assets/images/products/p1.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Games</p>
+                        <h4>Console Sony Playstation 5</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.719,90</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p2.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Processador AMD Ryzen 5 5600G</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 779,31</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p3.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Periféricos</p>
+                        <h4>Headset Gamer HyperX Cloud II</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 699,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p4.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Processador AMD Ryzen 9 5900X</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.599,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p5.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Placa Mãe MSI, Intel LGA 1700</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 769,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p6.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Computadores</p>
+                        <h4>Notebook Asus VivoBook 15 Intel Core i5-1135G7</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 3.443,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p7.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Hardware</p>
+                        <h4>Fonte Corsair CV750 750W</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 599,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="assets/images/products/p8.jpg" alt="" />
+                    <div class="product-details">
+                        <p>Computadores</p>
+                        <h4>Monitor Gamer LG 27 Full HD, IPS, HDMI</h4>
+                        <div class="product-foot">
+                            <div class="left">
+                                <h4>R$ 849,99</h4>
+                            </div>
+                            <button class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Arrivals Section -->
+        <div class="main-title">
+            <h2>Departamentos</h2>
+            <p>Procura algo em especifico? Comece por aqui!</p>
+        </div>
+        <!-- Start Banner Two -->
+        <section class="banner-two">
+            <div class="container">
+                <div class="img">
+                    <img src="assets/images/banner/1.png" alt="" />
+                    <div class="text">
+                        <h2>Computadores</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/2.png" alt="" />
+                    <div class="text">
+                        <h2>Hardware</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/1.png" alt="" />
+                    <div class="text">
+                        <h2>Computadores</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/2.png" alt="" />
+                    <div class="text">
+                        <h2>Hardware</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="assets/images/banner/3.png" alt="" />
+                    <div class="text">
+                        <h2>TVs</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Banner Two -->
+        <!-- Start Newselleter -->
+        <section class="new">
+            <div class="container">
+                <div class="text">
+                    <h4>Kilobyte News</h4>
+                    <p>Assine para receber novas <span>ofertas</span> toda semana</p>
+                </div>
+                <div class="input-group">
+                    <!-- <input type="nome" class="nome" placeholder="Seu nome" /> -->
+                    <input type="email" class="email" placeholder="Seu E-mail" />
+                    <button type="submit" class="btn-custum">Sign Up</button>
+                </div>
+            </div>
+        </section>
+        <!-- End Newselleter -->
+        <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="info">
+                        <img src="img/logo.png" alt="" />
+                        <h4>Contato</h4>
+                        <div class="details">
+                            <span class="bold">Endereço:</span>
+                            <span class="light">Avenida Lorem ipsum ipsum</span>
+                        </div>
+                        <div class="details">
+                            <span class="bold">Telefone:</span>
+                            <span class="light">11 91234 5678</span>
+                        </div>
+                        <div class="details">
+                            <span class="bold">Horario de atendimento:</span>
+                            <span class="light">9:00-16:00</span>
+                        </div>
+                        <h4>&nbsp;</h4>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4>Sobre</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Sobre Nós</a>
+                            </li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>Lorem ipsum, dolor sit</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Lorem ipsum, dolor sit</a>
+                            </li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>Lorem ipsum, dolor sit</h4>
+                        <p>Lorem ipsum, dolor sit</p>
+                        <div class="pay">
+                            <div class="app">
+                                <img src="img/pay/app.jpg" alt="" />
+                            </div>
+                            <div class="play">
+                                <img src="img/pay/play.jpg" alt="" />
+                            </div>
+                        </div>
+                        <p>Lorem ipsum, dolor sit</p>
+                        <div class="payed">
+                            <img src="img/pay/pay.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2023 Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+        <!-- FontAwesome Libirary JS -->
+        <script src="vendor/js/all.min.js"></script>
+        <!-- Main File For JS -->
+        <script src="vendor/js/main.js"></script>
     </body>
+
 </html>
