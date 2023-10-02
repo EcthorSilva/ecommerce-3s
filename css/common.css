@@ -48,6 +48,9 @@ a {
 }
 ul {
     list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
 }
 h1 {
     font-size: 50px;
@@ -125,7 +128,7 @@ header {
     width: 100%;
     background-color: var(--main-alt-color);
     box-shadow: var(--box-shadow);
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -196,26 +199,9 @@ header .container nav .menu-links .nav-item .nav-link {
     transition: var(--transition);
     position: relative;
 }
-header .container nav .menu-links .nav-item .nav-link::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 0;
-    background-color: var(--main-color);
-    transition: var(--transition);
-}
 header .container nav .menu-links .nav-item .nav-link:hover,
 header .container nav .menu-links .nav-item.active .nav-link {
-    color: var(--main-color);
-}
-header .container nav .menu-links .nav-item .nav-link:hover::before,
-header .container nav .menu-links .nav-item.active .nav-link::before {
-    width: 50%;
-}
-header .container nav .menu-links .nav-item:last-child .nav-link:hover::before {
-    width: 100%;
+    color: var(--secodary-color);
 }
 header .container nav .cart-icon {
     display: none;
@@ -454,6 +440,7 @@ header .container nav .menu-bars {
     background-color: var(--white-color);
     border-radius: 5px;
     height: 50px;
+    flex-wrap: nowrap;
 }
 .new .container .input-group {
     display: flex;
@@ -496,9 +483,33 @@ header .container nav .menu-bars {
     border-bottom-left-radius: 0;
 }
 /* End Newselleter */
+
+.about{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.about-us{
+    width: 100%;
+    background-size: cover;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.about-us .container{
+    width: 600px;
+}
 .shop,
-.blog,
-.about,
 .contact,
 .cart {
     width: 100%;
@@ -513,14 +524,12 @@ header .container nav .menu-bars {
     text-align: center;
 }
 .shop h2,
-.blog h2,
 .about h2,
 .contact h2,
 .cart h2 {
     color: var(--white-color);
 }
 .shop p,
-.blog p,
 .about p,
 .contact p,
 .cart p {
