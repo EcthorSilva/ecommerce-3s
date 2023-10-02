@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    /*
+     * Ouvinte de eventos .nav-modal-open
+    */
+
     // Adiciona um ouvinte de evento de clique ao elemento com classe 'nav-modal-open'
     $('.nav-modal-open').on('click', function (e) {
         // Evita que a ação padrão do evento de clique seja executada (neste caso, abrir uma página)
@@ -14,4 +18,5 @@ $(document).ready(function(){
         // Exibe o modal
         myModal.show();
     });
+    
 });

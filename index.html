@@ -43,7 +43,7 @@
                             <a class="nav-link nav-modal-open" href="#" rel="sobre">Sobre nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link nav-modal-open" href="#" rel="contato">Contato</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
@@ -478,7 +478,32 @@
         </div>
         <!-- End Modal -->
 
-        <!-- about Modal -->
+        <!-- Start Contact Modal -->
+        <div id="contato" class="visually-hidden">
+            <form action="post" class="form">
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome"
+                        aria-describedby="helpNome">
+                    <small id="helpNome" class="text-muted">Digite um nome valido</small>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="e-mail" class="form-label">E-mail</label>
+                    <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail"
+                        aria-describedby="helpE-mail">
+                    <small id="helpE-mail" class="text-muted">Digite um E-mail valido</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <div class="alert alert-primary" role="alert">
+                <p>Preencha todos os campos que entraremos <br>em contato com você o mais breve possivel</p>
+            </div>
+        </div>
+        <!-- End Contact Modal -->
+
+        <!-- Start About Modal -->
         <div id="sobre" class="visually-hidden">
             <section class="about">
                 <h2>Sobre Nós</h2>
@@ -492,8 +517,8 @@
                     </div>
                 </div>
             </section>
-            <!-- End About -->
         </div>
+        <!-- End About Modal -->
 
         <!-- Bootstrap -->
         <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>

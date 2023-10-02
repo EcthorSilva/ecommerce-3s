@@ -190,6 +190,10 @@ header .container nav .menu-links {
     display: none;
     color: var(--link-color);
 }
+
+.mark, mark{
+    background-color: var(--main-alt-color);
+}
 @media (max-width: 991px) {
     .mark {
         display: block;
@@ -526,6 +530,13 @@ header .container nav .menu-bars {
 .about-us .container{
     width: 600px;
 }
+
+@media (max-width: 767px) {
+    .about-us .container{
+        width: 300px;
+    }
+}
+
 .shop,
 .contact,
 .cart {
