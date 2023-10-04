@@ -59,7 +59,6 @@ var produtos = [
         preco: "R$ 239,99",
         imagemSrc: "assets/images/products/p10.jpg"
     },
-
 ];
 
 // Selecione todas as divs com a classe containerProducts
