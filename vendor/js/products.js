@@ -62,46 +62,51 @@ var produtos = [
 
 ];
 
-// Selecione a div container
-var container = document.getElementById("containerProducts");
+// Selecione todas as divs com a classe containerProducts
+var containers = document.querySelectorAll(".containerProducts");
 
-// Itere sobre o array de produtos e crie dinamicamente os elementos HTML para cada produto
-produtos.forEach(function(produto) {
-    // Crie elementos HTML para o produto
-    var divProduto = document.createElement("div");
-    divProduto.className = "product";
-    
-    var img = document.createElement("img");
-    img.src = produto.imagemSrc;
-    img.alt = produto.nome;
-    
-    var divDetalhes = document.createElement("div");
-    divDetalhes.className = "product-details";
-    
-    var pCategoria = document.createElement("p");
-    pCategoria.textContent = produto.categoria;
-    
-    var h4Nome = document.createElement("h4");
-    h4Nome.textContent = produto.nome;
-    
-    var divFoot = document.createElement("div");
-    divFoot.className = "product-foot";
-    
-    var divLeft = document.createElement("div");
-    divLeft.className = "left";
-    divLeft.innerHTML = produto.preco;
-    
-    var btnAddToCart = document.createElement("button");
-    btnAddToCart.className = "add-to-cart";
-    btnAddToCart.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
-    
-    // Adicione os elementos HTML ao DOM
-    divFoot.appendChild(divLeft);
-    divFoot.appendChild(btnAddToCart);
-    divDetalhes.appendChild(pCategoria);
-    divDetalhes.appendChild(h4Nome);
-    divDetalhes.appendChild(divFoot);
-    divProduto.appendChild(img);
-    divProduto.appendChild(divDetalhes);
-    container.appendChild(divProduto);
+// interage sobre o array de containers e adicione os produtos a cada um deles
+containers.forEach(function(container) {
+    // interage sobre o array de produtos e crie dinamicamente os elementos HTML para cada produto
+    produtos.forEach(function(produto) {
+        // Crie elementos HTML para o produto
+        var divProduto = document.createElement("div");
+        divProduto.className = "product";
+
+        var img = document.createElement("img");
+        img.src = produto.imagemSrc;
+        img.alt = produto.nome;
+
+        var divDetalhes = document.createElement("div");
+        divDetalhes.className = "product-details";
+
+        var pCategoria = document.createElement("p");
+        pCategoria.textContent = produto.categoria;
+
+        var h4Nome = document.createElement("h4");
+        h4Nome.textContent = produto.nome;
+
+        var divFoot = document.createElement("div");
+        divFoot.className = "product-foot";
+
+        var divLeft = document.createElement("div");
+        divLeft.className = "left";
+        divLeft.innerHTML = produto.preco;
+
+        var btnAddToCart = document.createElement("button");
+        btnAddToCart.className = "add-to-cart";
+        btnAddToCart.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
+
+        // Adicione os elementos HTML ao DOM
+        divFoot.appendChild(divLeft);
+        divFoot.appendChild(btnAddToCart);
+        divDetalhes.appendChild(pCategoria);
+        divDetalhes.appendChild(h4Nome);
+        divDetalhes.appendChild(divFoot);
+        divProduto.appendChild(img);
+        divProduto.appendChild(divDetalhes);
+
+        // Adicione o produto ao container
+        container.appendChild(divProduto);
+    });
 });
