@@ -4,14 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kilobyte</title>
+        <title>Homepage | Kilobyte</title>
         <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
-        <!-- FontAwesome Libirary CSS -->
-        <link rel="stylesheet" href="css/all.min.css" />
         <!-- Main Common File -->
-        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="./css/common.css" />
         <!-- Main File For CSS -->
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
         <!-- Import JQuery -->
@@ -20,7 +18,7 @@
         <div class="video_wrap">
 			<div id="video-viewport">
 				<video class="video-file" preload="" loop="" autobuffer="" autoplay="" muted="" width="1920" height="1080">
-					<source src="video/working.mp4" type="video/mp4">
+					<source src="assets/video/background.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -46,10 +44,14 @@
                             <a class="nav-link nav-modal-open" href="#" rel="contato">Contato</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
                         </li>
                     </ul>
-                    <a class="cart-icon" href="cart.html"><i class="fa-solid fa-bag-shopping fa-lg fa-fw"></i></a>
+                    <a class="user-icon nav-modal-open" href="#" rel="login"><i class="fa-solid fa-user fa-lg fa-fw"></i></a>
+                    <a class="cart-icon" href="#"><i class="fa-solid fa-bag-shopping fa-lg fa-fw"></i></a>
                     <a class="menu-bars" href="#"><i class="fa-solid fa-outdent fa-lg fa-fw"></i></a>
                 </nav>
             </div>
@@ -64,6 +66,7 @@
             </div>
         </section>
         <!-- End Hero Section -->
+
         <!-- Start Banner -->
         <section class="banner">
             <div class="container">

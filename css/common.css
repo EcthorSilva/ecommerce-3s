@@ -209,6 +209,8 @@ header .container nav .menu-links .nav-item {
     header .container nav .menu-links .nav-item {
         padding: 15px 0;
     }
+
+    header .container nav .menu-links .nav-item:nth-last-child(2),
     header .container nav .menu-links .nav-item:last-child {
         display: none;
     }
@@ -224,11 +226,23 @@ header .container nav .menu-links .nav-item .nav-link:hover,
 header .container nav .menu-links .nav-item.active .nav-link {
     color: var(--secodary-color);
 }
+
 header .container nav .cart-icon {
     display: none;
 }
+header .container nav .user-icon {
+    display: none;
+}
+
 @media (max-width: 991px) {
     header .container nav .cart-icon {
+        display: block;
+        color: var(--link-color);
+        margin-right: 20px;
+    }
+}
+@media (max-width: 991px) {
+    header .container nav .user-icon {
         display: block;
         color: var(--link-color);
         margin-right: 20px;

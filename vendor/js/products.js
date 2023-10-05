@@ -65,9 +65,9 @@ var produtos = [
 var containers = document.querySelectorAll(".containerProducts");
 
 // interage sobre o array de containers e adicione os produtos a cada um deles
-containers.forEach(function(container) {
+containers.forEach(function (container) {
     // interage sobre o array de produtos e crie dinamicamente os elementos HTML para cada produto
-    produtos.forEach(function(produto) {
+    produtos.forEach(function (produto) {
         // Crie elementos HTML para o produto
         var divProduto = document.createElement("div");
         divProduto.className = "product";

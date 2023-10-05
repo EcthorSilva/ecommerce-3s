@@ -2,7 +2,7 @@
 const video = document.querySelector('#video-viewport video');
 const source = document.querySelector('#video-viewport source');
 
-source.src = "assets/video/background.mp4";
+source.src = "/assets/video/background.mp4";
 
 /* Script criado para corrigir a resolução do background video de acordo com a resolução da janela */
 

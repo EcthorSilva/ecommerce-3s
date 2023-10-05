@@ -18,5 +18,4 @@ $(document).ready(function(){
         // Exibe o modal
         myModal.show();
     });
-    
 });
