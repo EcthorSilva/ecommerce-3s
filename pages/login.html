@@ -18,7 +18,7 @@
         <div class="video_wrap">
 			<div id="video-viewport">
 				<video class="video-file" preload="" loop="" autobuffer="" autoplay="" muted="" width="1920" height="1080">
-					<source src="assets/video/background.mp4" type="video/mp4">
+					<source src="/assets/video/background.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -90,7 +90,7 @@
             </div>
         </section>
         <!-- END LOGIN -->
-        
+
         <!-- Start Footer -->
         <footer>
             <div class="container">
@@ -164,6 +164,66 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modal Body -->
+        <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+        <div class="modal fade custom-modal" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+            aria-labelledby="modalTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <!-- Start Contact Modal -->
+        <div id="contato" class="visually-hidden">
+            <form action="post" class="form">
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome"
+                        aria-describedby="helpNome">
+                    <small id="helpNome" class="text-muted">Digite um nome valido</small>
+                </div>
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="e-mail" class="form-label">E-mail</label>
+                    <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail"
+                        aria-describedby="helpE-mail">
+                    <small id="helpE-mail" class="text-muted">Digite um E-mail valido</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <div class="alert alert-primary" role="alert">
+                <p>Preencha todos os campos que entraremos <br>em contato com você o mais breve possivel</p>
+            </div>
+        </div>
+        <!-- End Contact Modal -->
+
+        <!-- Start About Modal -->
+        <div id="sobre" class="visually-hidden">
+            <section class="about">
+                <h2>Sobre Nós</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur</p>
+            </section>
+            <section class="about-us">
+                <div class="container">
+                    <div class="about-text">
+                        <h1>Quem Somos?</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aut, excepturi optio quo similique odio expedita adipisci assumenda dolor provident accusantium consequuntur omnis sit nam deleniti mollitia obcaecati, quidem explicabo!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- End About Modal -->
 
         <!-- Bootstrap -->
         <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
