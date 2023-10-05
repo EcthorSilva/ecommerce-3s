@@ -5,13 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage | Kilobyte</title>
-        <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <!-- Main Common File -->
-        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="/css/common.css" />
         <!-- Main File For CSS -->
-        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
+        <!-- Import JQuery -->
+		<script type="text/javascript" src="/vendor/jquery/jquery-3.6.4.min.js"></script>
+        <!-- BACKGROUND VIDEO -->
+        <div class="video_wrap">
+			<div id="video-viewport">
+				<video class="video-file" preload="" loop="" autobuffer="" autoplay="" muted="" width="1920" height="1080">
+					<source src="assets/video/background.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<!-- SCRIPT BACKGROUND VIDEO-->
+		<script type="text/javascript" src="/vendor/js/background-video.js"></script>
         <!-- Start Header -->
         <header>
             <div class="container">
@@ -20,7 +32,7 @@
                     <ul class="menu-links">
                         <a class="mark" href="#"><i class="fa-solid fa-xmark fa-lg fa-fw"></i></a>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Categorias</a>
@@ -45,22 +57,125 @@
             </div>
         </header>
         <!-- End Header -->
-        
+        <!-- START LOGIN -->
         <section class="login">
-            
+            <div class="parent">
+                <div class="left-container">
+                    <div class="sub-left-container">
+                        <h1>texto aqui</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sed iusto unde perferendis incidunt facere, corrupti quam placeat aspernatur id cupiditate nesciunt nemo architecto ut fugit laboriosam voluptates eveniet harum?</p>
+                    </div>
+                </div>
+                <div class="right-container">
+                    <a class="logo">&nbsp;</a>
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Endereço de email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Lembrar-me</label>
+                        </div>
+                        <div class="mb-3">
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </form>
+                </div>
+            </div>
         </section>
+        <!-- END LOGIN -->
+        
+        <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="info">
+                        <img src="img/logo.png" alt="" />
+                        <h4>Contato</h4>
+                        <div class="details">
+                            <span class="bold">Endereço:</span>
+                            <span class="light">Avenida Lorem ipsum ipsum</span>
+                        </div>
+                        <div class="details">
+                            <span class="bold">Telefone:</span>
+                            <span class="light">11 91234 5678</span>
+                        </div>
+                        <div class="details">
+                            <span class="bold">Horario de atendimento:</span>
+                            <span class="light">9:00-16:00</span>
+                        </div>
+                        <h4>&nbsp;</h4>
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram fa-fw"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h4>Sobre</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Sobre Nós</a>
+                            </li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>Lorem ipsum, dolor sit</h4>
+                        <ul>
+                            <li>
+                                <a href="#">Lorem ipsum, dolor sit</a>
+                            </li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                            <li><a href="#">Lorem ipsum, dolor sit</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>Lorem ipsum, dolor sit</h4>
+                        <p>Lorem ipsum, dolor sit</p>
+                        <div class="pay">
+                            <div class="app">
+                                <img src="img/pay/app.jpg" alt="" />
+                            </div>
+                            <div class="play">
+                                <img src="img/pay/play.jpg" alt="" />
+                            </div>
+                        </div>
+                        <p>Lorem ipsum, dolor sit</p>
+                        <div class="payed">
+                            <img src="img/pay/pay.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">Kilobyte &copy; 2023 Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
 
         <!-- Bootstrap -->
-        <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
         <!-- jquery import -->
-        <script src="./vendor/jquery/jquery-3.6.4.min.js"></script>
+        <script src="/vendor/jquery/jquery-3.6.4.min.js"></script>
         <!-- FontAwesome Libirary JS -->
-        <script src="./vendor/js/all.min.js"></script>
+        <script src="/vendor/js/all.min.js"></script>
         <!-- Main File For JS -->
-        <script src="./vendor/js/main.js"></script>
+        <script src="/vendor/js/main.js"></script>
         <!-- import Modal -->
-        <script src="./vendor/js/modal.js"></script>
+        <script src="/vendor/js/modal.js"></script>
         <!-- import products -->
-        <script src="./vendor/js/products.js"></script>
+        <script src="/vendor/js/products.js"></script>
     </body>
 </html>

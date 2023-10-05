@@ -283,3 +283,83 @@ a.logo {
 .alert p{
     color: black;
 }
+
+
+/* LOGIN */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    align-items: center;
+
+    height: 100vh; /* Ajuste conforme necessário */
+
+    z-index: 1;
+
+}  
+.left-container {
+    grid-area: 2 / 2 / 5 / 6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    background-color: rgba(0, 0, 0, 0.514);
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.sub-left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    /* background-color: rgb(42, 165, 63); */
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    flex-direction: column;
+    padding: 15px;
+}
+.left-container h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--white-color);
+}
+.left-container p {
+    font-size: 16px;
+    margin: 15px 0 20px 0;
+    color: var(--white-color);
+}
+
+.right-container {
+    grid-area: 2 / 4 / 5 / 6;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 0px 15px 0px;
+    background-color: var(--white-color);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 15px 0 15px 0;
+}
+
+@media (max-width: 767px) {
+    .left-container {
+        display: none;
+    }
+
+    /* Posicione o .right-container no meio das colunas 3 e 4 */
+    .right-container {
+        grid-area: 2 / 3 / 5 / 5;
+        min-width: 350px;
+    }
+}
