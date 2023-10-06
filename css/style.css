@@ -375,6 +375,10 @@ a.logo {
     padding-top: 4rem!important;
     padding-bottom: 1rem!important;
 }
+.py-5-custom{
+    padding-top: 6rem!important;
+    padding-bottom: 2rem!important;
+}
 .d-flex-custom{
     display: flex!important;
     justify-content: center;
