@@ -54,6 +54,10 @@ a.logo {
     background-repeat: no-repeat;
     flex-shrink: 0;
 }
+
+.logo{
+    align-self: center;
+}
 /* End Logo */
 
 /* Start Hero Section */
@@ -384,10 +388,6 @@ li p{
     margin: 0px 0 10px 0;
 }
 
-.list-cust{
-    color: #696969;
-}
-
 .form-cupom-label{
     margin-bottom: 1rem;
 }
@@ -427,4 +427,27 @@ li p{
 
 .btn2{
     font-size: 15px;
+}
+
+.primeiro{
+    margin-top: 13rem;
+    margin-bottom: 10rem;
+}
+
+@media (max-width: 700px) {
+    .primeiro{
+        margin-top: 18rem;
+        margin-bottom: 10rem;
+    }
+}
+
+
+.container-login{
+    margin-top: 4rem;
+}
+
+@media (max-width: 700px) {
+    .container-login{
+        margin-top: 0rem;
+    }
 }
