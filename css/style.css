@@ -377,19 +377,7 @@ a.logo {
     align-items: center;
 }
 
-.btn-custum{
-    display: inline-block;
-    color: var(--dark); /* desenho de dentro */
-    font-size: 15px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    padding: 15px; /* tamanho */
-    border-radius: 500px;
-    cursor: pointer;
-    transition: var(--transition);
-    background-color: transparent;
-}
+
 
 li p{
     padding-top: 0;
@@ -409,6 +397,7 @@ li p{
         height: 100vh!important;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 }
 
@@ -424,10 +413,18 @@ li p{
 
     border: none;
     outline: none;
+
+    font-size: 15px;
 }
 
 .amiguinhos .btn2{
     background-color: var(--main-color);
     border: none;
     outline: none;
+
+    font-size: 15px;
+}
+
+.btn2{
+    font-size: 15px;
 }

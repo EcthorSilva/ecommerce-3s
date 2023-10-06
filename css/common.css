@@ -106,6 +106,19 @@ p {
     background-color: var(--main-color);
     color: var(--white-color);
 }
+.btn-custum2{
+    display: inline-block;
+    color: var(--dark); /* desenho de dentro */
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    padding: 15px; /* tamanho */
+    border-radius: 500px;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: transparent;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
