@@ -2,25 +2,17 @@
 /* Start Variables */
 :root {
     --dark: #222;
-    --light-dark: #465b52;
     --white-color: #fff;
     --main-alt-color: #e4e5e9;
     --main-color: #004388;
     --secodary-color: #007cff;
     --secodary: #ffffff;
-    --second: #cdd4f8;
-    --prime: #f6dbf6;
-    --whit: #fff2e5;
-    --yellow: #ff9800;
-    --red: #f44336;
     --link-color: #1a1a1a;
-    --primary: #fddde4;
-    --light-green: #cdebbc;
     --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
     --box-shadow1: 20px 20px 34px rgba(0, 0, 0, 0.03);
     --text-shadow: 1px 1px 2.5px rgb(48, 48, 48);
     --border-color: #efefef;
-    --transition: 0.5s;
+    --transition: 0.3s;
     --section-padding: 40px;
 }
 /* End Variables */
@@ -63,6 +55,11 @@ a {
 :focus {
     outline: none;
 }
+::selection {
+    background-color: var(--secodary-color); /* Cor de fundo quando selecionado */
+    color: white; /* Cor do texto quando selecionado */
+}
+
 ul {
     list-style: none;
     margin-top: 0;
@@ -89,7 +86,7 @@ h6 {
 }
 p {
     font-size: 16px;
-    color: var(--light-dark);
+    color: var(--dark);
     margin: 15px 0 20px 0;
 }
 .btn-custum {
@@ -606,6 +603,7 @@ header .container nav .menu-bars {
 /* Start Footer */
 footer {
     padding-top: var(--section-padding);
+    box-shadow: var(--box-shadow);
 }
 footer .container .footer-top {
     display: flex;
@@ -660,3 +658,49 @@ footer .container .footer-bottom {
     align-items: center;
 }
 /* End Footer */
+
+
+/* Adicione estilos específicos para a tabela do carrinho aqui */
+.table {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%; /* Ajuste a largura da tabela conforme necessário */
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+}
+
+.fa-circle-xmark {
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.fa-circle-xmark:hover {
+    cursor: pointer;
+}
