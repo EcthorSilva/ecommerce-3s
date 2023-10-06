@@ -1,5 +1,7 @@
 # E-Commerce
 
+### NOTA: Por conta de algumas questões do Github Pages, algumas paginas não estão disponiveis e outras não estão funcionando corretamente. 
+
 ###### Uma plataforma de e-commerce personalizada.
 
 O objetivo do projeto é produzir uma plataforma de e-commerce personalizada para a disciplina Programação WEB, presente no 2° Semestre do curso superior em Tecnologia em Analise e Desenvolvimento de Sistemas.
