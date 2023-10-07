@@ -455,3 +455,14 @@ li p{
         margin-top: 0rem;
     }
 }
+
+.h-100-custom{
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-start;
+    overflow-y: none;
+}
+
+.card-custom{
+    min-height: 400px;
+}

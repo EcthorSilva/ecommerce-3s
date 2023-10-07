@@ -1,3 +1,4 @@
+// Array de produtos
 var produtos = [
     {
         categoria: "Games",
@@ -66,21 +67,24 @@ var produtos = [
 // Selecione todas as divs com a classe containerProducts
 var containers = document.querySelectorAll(".containerProducts");
 
-// interage sobre o array de containers e adicione os produtos a cada um deles
+// Itera sobre os containers e adiciona produtos a cada um deles
 containers.forEach(function (container) {
-    // interage sobre o array de produtos e crie dinamicamente os elementos HTML para cada produto
+    // Itera sobre os produtos e cria elementos HTML dinâmicos para cada produto
     produtos.forEach(function (produto) {
-        // Crie elementos HTML para o produto
+        // Cria um novo elemento div para representar o produto
         var divProduto = document.createElement("div");
         divProduto.className = "product";
 
+        // Cria um elemento de imagem para o produto
         var img = document.createElement("img");
         img.src = produto.imagemSrc;
         img.alt = produto.nome;
 
+        // Cria um elemento div para os detalhes do produto
         var divDetalhes = document.createElement("div");
         divDetalhes.className = "product-details";
 
+        // Cria elementos para categoria, nome e preço do produto
         var pCategoria = document.createElement("p");
         pCategoria.textContent = produto.categoria;
 
@@ -94,25 +98,28 @@ containers.forEach(function (container) {
         divLeft.className = "left";
         divLeft.innerHTML = produto.preco;
 
+        // Cria um botão para adicionar ao carrinho
         var btnAddToCart = document.createElement("button");
         btnAddToCart.className = "add-to-cart";
         btnAddToCart.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
 
-        // Adicione os elementos HTML ao DOM
+        // Adiciona os elementos HTML ao DOM
         divFoot.appendChild(divLeft); // Preço do produto
-        divFoot.appendChild(btnAddToCart);
+        divFoot.appendChild(btnAddToCart); // Botão de adicionar ao carrinho
         divDetalhes.appendChild(pCategoria); // Categoria do produto
         divDetalhes.appendChild(h4Nome); // Nome do produto
-        divDetalhes.appendChild(divFoot);
-        divProduto.appendChild(img);
-        divProduto.appendChild(divDetalhes);
+        divDetalhes.appendChild(divFoot); // Preço e botão de adicionar ao carrinho
+        divProduto.appendChild(img); // Imagem do produto
+        divProduto.appendChild(divDetalhes); // Detalhes do produto
 
-        // Adicione o produto ao container
+        // Adiciona o produto ao container
         container.appendChild(divProduto);
     });
 });
 
 /* CARRINHO DE COMPRAS */
+
+// Função para adicionar produto ao carrinho
 function adicionarProdutoAoCarrinho(produto) {
     var carrinho = document.querySelector(".card-body");
 
@@ -169,14 +176,6 @@ function adicionarProdutoAoCarrinho(produto) {
     strongPreco.textContent = produto.preco;
     pPreco.appendChild(strongPreco);
 
-    // Botão de remoção de item
-    var btnRemover = document.createElement("button");
-    btnRemover.type = "button";
-    btnRemover.className = "btn-custum2 btn btn-primary btn-sm me-1 mb-2";
-    btnRemover.setAttribute("data-mdb-toggle", "tooltip");
-    btnRemover.setAttribute("title", "Remove item");
-    btnRemover.innerHTML = '<i class="fas fa-trash"></i>';
-
     // Adiciona um evento de clique ao botão de remoção
     btnRemover.addEventListener("click", function () {
         // Remove o item do carrinho
@@ -200,46 +199,25 @@ function adicionarProdutoAoCarrinho(produto) {
         var valorVista = totalProdutos * 0.7;
         var valorParcela = totalProdutos / 10;
 
-        // Atualizar os elementos no HTML com o novo valor
+        // Atualiza os elementos no HTML com os novos valores formatados
         document.querySelector("ul.list-group li:nth-child(1) span").textContent = "R$ " + formatarNumero(totalProdutos);
         document.querySelector("ul.list-group li:nth-child(3) span").textContent = "R$ " + formatarNumero(valorPrazo);
         document.querySelector("ul.list-group li:nth-child(5) span").textContent = "R$ " + formatarNumero(valorVista);
-        document.querySelector(".list-cust span").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
+        document.querySelector("ul.list-group li:nth-child(7) div").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
     });
-
-    // Adiciona os elementos à divCol2
-    divCol2.appendChild(strongNome); // Nome do produto
-    divCol2.appendChild(pCategoria); // Categoria do produto
-    divCol2.appendChild(btnRemover); // Botão de remoção
-
-    // Adiciona os elementos ao divCol3
-    divCol3.appendChild(divQuantidade); // Quantidade do produto
-    divCol3.appendChild(pPreco); // Preço do produto
-
-    // Adiciona os divCol à divRow
-    divRow.appendChild(divCol1); // Coluna para a imagem do produto
-    divRow.appendChild(divCol2); // Coluna para o nome, categoria e botão de remoção
-    divRow.appendChild(divCol3); // Coluna para a quantidade e preço do produto
-
-    // Adiciona a linha horizontal entre os produtos
-    var hr = document.createElement("hr");
-    hr.className = "my-4";
-
-    // Adiciona divRow e hr ao carrinho
-    carrinho.appendChild(divRow); // Adiciona a linha com informações do produto ao carrinho
-    carrinho.appendChild(hr); // Adiciona a linha horizontal separadora ao carrinho
 }
 
-// Formata os numeros para o padrão brasileiro
+// Função para formatar número com separador de milhares e decimais
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+// Função para atualizar o carrinho de compras
 function atualizarCarrinho(produto) {
-    // Adicionar o produto ao carrinho
+    // Adiciona o produto ao carrinho
     adicionarProdutoAoCarrinho(produto);
 
-    // Calcular o valor total dos produtos
+    // Calcula o valor total dos produtos no carrinho
     var totalProdutos = 0;
     var carrinhoProdutos = document.querySelectorAll(".card-body .row");
     carrinhoProdutos.forEach(function (produto) {
@@ -251,18 +229,14 @@ function atualizarCarrinho(produto) {
         }
     });
 
-    // Calcular o valor à prazo (mesmo que o total dos produtos)
-    var valorPrazo = totalProdutos;
+    // Calcula valores relacionados aos pagamentos (à prazo, à vista, parcelas)
+    var valorPrazo = totalProdutos; // Calcular o valor à prazo (mesmo que o total dos produtos)
+    var valorVista = totalProdutos * 0.7; // Calcular o valor à vista com desconto de 30%
+    var valorParcela = totalProdutos / 10; // Calcular o valor de cada parcela em 10 vezes sem juros
 
-    // Calcular o valor à vista com desconto de 30%
-    var valorVista = totalProdutos * 0.7;
-
-    // Calcular o valor de cada parcela em 10 vezes sem juros
-    var valorParcela = totalProdutos / 10;
-
-    // Atualizar os elementos no HTML com formatação localizada
+    // Atualiza os elementos no HTML com os novos valores formatados
     document.querySelector("ul.list-group li:nth-child(1) span").textContent = "R$ " + formatarNumero(totalProdutos);
     document.querySelector("ul.list-group li:nth-child(3) span").textContent = "R$ " + formatarNumero(valorPrazo);
     document.querySelector("ul.list-group li:nth-child(5) span").textContent = "R$ " + formatarNumero(valorVista);
-    document.querySelector(".list-cust span").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
+    document.querySelector("ul.list-group li:nth-child(7) div").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
 }
