@@ -66,8 +66,7 @@
                             <div class="card" style="border-radius: 15px;">
                                 <div class="card-body p-5">
                                     <h2 class="text-center mb-5">Login</h2>
-        
-                                    <form>
+                                    <form id="loginForm">
                                         <div class="form-floating mb-4">
                                             <input type="email" class="form-control form-control-lg" id="e-mail" placeholder="e-mail">
                                             <label for="e-mail">E-mail</label>
@@ -87,14 +86,17 @@
         
                                         <div class="d-flex justify-content-center">
                                             <button type="button"
-                                                class="btn btn-primary btn-block btn-lg">Register</button>
+                                                class="btn btn-primary btn-block btn-lg" id="loginButton">Entrar</button>
                                         </div>
         
                                         <p class="text-center text-muted mt-4 mb-0">Ainda não tem uma conta? <a href="/pages/signin.html"
-                                                class="fw-bold text-body"><u>Cadastre-se</u></a></p>
-        
+                                            class="fw-bold text-body"><u>Cadastre-se</u></a>
+                                        </p>
+
+                                        <div class="alert alert-danger d-flex justify-content-center visually-hidden" role="alert">
+                                            <strong>Usuario ou Senha incorreto</strong>
+                                        </div>
                                     </form>
-        
                                 </div>
                             </div>
                         </div>
@@ -202,14 +204,14 @@
                 <!-- Nome -->
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome"
+                    <input type="text" name="nome" class="form-control" placeholder="Digite seu nome"
                         aria-describedby="helpNome">
                     <small id="helpNome" class="text-muted">Digite um nome valido</small>
                 </div>
                 <!-- Email -->
                 <div class="mb-3">
                     <label for="e-mail" class="form-label">E-mail</label>
-                    <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail"
+                    <input type="text" name="e-mail" class="form-control" placeholder="Digite seu e-mail"
                         aria-describedby="helpE-mail">
                     <small id="helpE-mail" class="text-muted">Digite um E-mail valido</small>
                 </div>
@@ -248,7 +250,7 @@
         <script src="/vendor/js/main.js"></script>
         <!-- import Modal -->
         <script src="/vendor/js/modal.js"></script>
-        <!-- import products -->
-        <script src="/vendor/js/products.js"></script>
+        <!-- import users -->
+        <script src="/vendor/js/users.js"></script>
     </body>
 </html>
