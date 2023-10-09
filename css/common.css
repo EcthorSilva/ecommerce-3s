@@ -221,6 +221,7 @@ header .container nav .menu-links .nav-item {
     }
 
     header .container nav .menu-links .nav-item:nth-last-child(2),
+    header .container nav .menu-links .nav-item:nth-last-child(3),
     header .container nav .menu-links .nav-item:last-child {
         display: none;
     }

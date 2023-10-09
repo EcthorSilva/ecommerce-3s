@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Esconde visualmente o botão 2 antes do login
     document.querySelector('.botao2').classList.add('visually-hidden');
     document.querySelector('.botao4').classList.add('visually-hidden');
-    document.querySelector('.botao4').classList.add('visually-hidden');
 
     // Se houver um usuário logado, torna o botão 1 visível e oculta o botão 2
     if (loggedInUser) {
