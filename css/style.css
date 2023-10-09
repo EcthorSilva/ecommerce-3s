@@ -466,3 +466,20 @@ li p{
 .card-custom{
     min-height: 400px;
 }
+
+.dropdown-custom{
+    margin-bottom: .4rem;
+}
+
+
+header .container nav .user-icon-custom {
+    display: none;
+}
+@media (max-width: 991px) {
+    header .container nav .user-icon-custom {
+        display: block;
+        color: var(--link-color);
+        margin-bottom: 2px;
+        margin-left: 3px;
+    }
+}

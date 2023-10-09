@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
+        <!-- Import Popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
         <!-- Start Header -->
         <header>
             <div class="container">
@@ -31,14 +33,44 @@
                         <li class="nav-item">
                             <a class="nav-link nav-modal-open" href="#" rel="contato">Contato</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- Caso o usuario não esteja logado -->
+                        <li class="botao1 nav-item">
                             <a class="nav-link" href="/pages/login.html"><i class="fa-solid fa-user fa-fw"></i></a>
+                        </li>
+                        <!-- Caso o usuario já tenha logado -->
+                        <li class="botao2 nav-item dropdown-custom">
+                            <a class="nav-link fa-solid fa-user fa-fw" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                &nbsp;
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="/pages/profile.html">Perfil</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pages/cart.html"><i class="fa-solid fa-cart-shopping fa-fw"></i></a>
                         </li>
                     </ul>
-                    <a class="user-icon" href="/pages/login.html" rel="login"><i class="fa-solid fa-user fa-lg fa-fw"></i></a>
+                    <!-- mobile  -->
+                    <a class="botao3 user-icon " href="/pages/login.html" rel="login"><i class="fa-solid fa-user fa-lg fa-fw"></i></a>
+                    <!-- Caso o usuario já tenha logado -->
+                    <div class="botao4">
+                        <a class="user-icon-custom nav-link fa-solid fa-user fa-fw" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="height: 20px;">
+                            &nbsp;
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="/pages/profile.html">Perfil</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="logout()">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
                     <a class="cart-icon" href="/pages/cart.html"><i class="fa-solid fa-cart-shopping fa-lg fa-fw"></i></a>
                     <a class="menu-bars" href="#"><i class="fa-solid fa-outdent fa-lg fa-fw"></i></a>
                 </nav>
@@ -271,5 +303,7 @@
         <script src="/vendor/js/modal.js"></script>
         <!-- import products -->
         <script src="/vendor/js/products.js"></script>
+        <!-- header script -->
+        <script src="/vendor/js/header.js"></script>
     </body>
 </html>

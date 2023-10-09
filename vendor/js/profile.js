@@ -23,7 +23,7 @@ if (loggedInUser) {
 
 if (usuarioEncontrado) {
     localStorage.setItem('loggedInUser', JSON.stringify(usuarioEncontrado));
-    console.log('Usuário logado:', usuarioEncontrado); // Adicione esta linha
+    console.log('Usuário logado:', usuarioEncontrado);
     window.location.href = "/pages/profile.html";
 } else {
     // Exibe a mensagem de erro se as credenciais estiverem incorretas

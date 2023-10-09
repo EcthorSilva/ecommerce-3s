@@ -45,6 +45,3 @@ document.getElementById("e-mail").addEventListener("focus", function () {
 document.getElementById("password").addEventListener("focus", function () {
     document.querySelector('.alert-danger').classList.add('visually-hidden');
 });
-
-
-

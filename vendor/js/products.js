@@ -180,7 +180,6 @@ function atualizarCarrinho(produto, acao, quantidade) {
 
         };
 
-
         // Coluna 3: Quantidade e preço do produto
         divQuantidade.appendChild(btnDiminuir);
         divQuantidade.appendChild(inputQuantidade);
