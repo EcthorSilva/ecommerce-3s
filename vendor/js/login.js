@@ -21,19 +21,30 @@ var usuarios = [
 document.getElementById("loginButton").addEventListener("click", function () {
     var email = document.getElementById("e-mail").value;
     var password = document.getElementById("password").value;
+    var errorDiv = document.querySelector('.alert-danger');
 
-    // Verifica se as credenciais correspondem aos usuários no array
-    var usuarioEncontrado = usuarios.find(function(usuario) {
-        return usuario.email === email && usuario.senha === password;
-    });
+    // Limpa a mensagem de erro ao tentar fazer login novamente
+    errorDiv.classList.add('visually-hidden');
 
-    // Se encontrar o usuário, armazena as informações no localStorage e redireciona para a página de perfil
-    if (usuarioEncontrado) {
-        localStorage.setItem('loggedInUser', JSON.stringify(usuarioEncontrado));
-        window.location.href = "/pages/profile.html";
+    // Verifica se os campos de e-mail e senha estão preenchidos
+    if (email.trim() === "" || password.trim() === "") {
+        errorDiv.textContent = "Todos os campos são obrigatórios.";
+        errorDiv.classList.remove('visually-hidden');
     } else {
-        // Exibe a mensagem de erro se as credenciais estiverem incorretas
-        document.querySelector('.alert-danger').classList.remove('visually-hidden');
+        // Verifica se as credenciais correspondem aos usuários no array
+        var usuarioEncontrado = usuarios.find(function(usuario) {
+            return usuario.email === email && usuario.senha === password;
+        });
+
+        // Se encontrar o usuário, armazena as informações no localStorage e redireciona para a página de perfil
+        if (usuarioEncontrado) {
+            localStorage.setItem('loggedInUser', JSON.stringify(usuarioEncontrado));
+            window.location.href = "/pages/profile.html";
+        } else {
+            // Exibe a mensagem de erro se as credenciais estiverem incorretas
+            errorDiv.textContent = "Usuário ou senha incorretos.";
+            errorDiv.classList.remove('visually-hidden');
+        }
     }
 });
 
