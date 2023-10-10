@@ -17,6 +17,12 @@ var usuarios = [
     },
 ]
 
+// Função para validar o formato do e-mail usando regex
+function validarEmail(email) {
+    var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
 // Função para verificar o login
 document.getElementById("loginButton").addEventListener("click", function () {
     var email = document.getElementById("e-mail").value;
@@ -30,9 +36,12 @@ document.getElementById("loginButton").addEventListener("click", function () {
     if (email.trim() === "" || password.trim() === "") {
         errorDiv.textContent = "Todos os campos são obrigatórios.";
         errorDiv.classList.remove('visually-hidden');
+    } else if (!validarEmail(email)) {
+        errorDiv.textContent = "Por favor, insira um e-mail válido.";
+        errorDiv.classList.remove('visually-hidden');
     } else {
         // Verifica se as credenciais correspondem aos usuários no array
-        var usuarioEncontrado = usuarios.find(function(usuario) {
+        var usuarioEncontrado = usuarios.find(function (usuario) {
             return usuario.email === email && usuario.senha === password;
         });
 
