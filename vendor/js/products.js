@@ -148,3 +148,100 @@ function adicionarAoCarrinho(produto, quantidade) {
     // Log para verificar os itens no console
     console.log("Itens no carrinho:", carrinho);
 }
+
+
+/* categoria */
+
+// Selecione a div com o id categorias
+var categoriasContainer = document.getElementById("categorias");
+
+// Agrupa os produtos por categoria
+var produtosPorCategoria = {};
+produtos.forEach(function (produto) {
+    if (!produtosPorCategoria[produto.categoria]) {
+        produtosPorCategoria[produto.categoria] = [];
+    }
+    produtosPorCategoria[produto.categoria].push(produto);
+});
+
+for (var categoria in produtosPorCategoria) {
+    // Criação dinâmica dos cards
+    var categoriaCard = document.createElement("div");
+    categoriaCard.className = "card mb-1";
+
+    var cardHeader = document.createElement("div");
+    cardHeader.className = "card-header-tabs py-3";
+
+    var headerTitle = document.createElement("h5");
+    headerTitle.className = "mb-0 d-flex justify-content-center align-items-center";
+    headerTitle.textContent = categoria;
+
+    cardHeader.appendChild(headerTitle);
+    categoriaCard.appendChild(cardHeader);
+
+    var cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+
+    // Itera sobre os produtos da categoria
+    var produtosCategoria = produtosPorCategoria[categoria];
+    var produtosPorLinha = 4;  // Número desejado de produtos por linha
+    var numLinhas = Math.ceil(produtosCategoria.length / produtosPorLinha);
+
+    for (var linha = 0; linha < numLinhas; linha++) {
+        var linhaContainer = document.createElement("div");
+        linhaContainer.className = "row";
+
+        for (var i = linha * produtosPorLinha; i < (linha + 1) * produtosPorLinha && i < produtosCategoria.length; i++) {
+            var produto = produtosCategoria[i];
+            var col = document.createElement("div");
+            col.className = "col-lg-3 col-md-6 mb-4 mb-lg-0";
+
+            var card = document.createElement("div");
+            card.className = "card";
+
+            var img = document.createElement("img");
+            img.src = produto.imagemSrc;
+            img.alt = "Imagem do Produto";
+            img.className = "card-img-top";
+
+            var cardCardBody = document.createElement("div");
+            cardCardBody.className = "card-body";
+
+            var title = document.createElement("h5");
+            title.className = "card-title";
+            title.textContent = produto.nome;
+
+            var price = document.createElement("p");
+            price.className = "card-text";
+            price.textContent = produto.preco;
+
+            var buyButton = document.createElement("a");
+            buyButton.href = "#";
+            buyButton.className = "btn btn-outline-primary";
+            buyButton.textContent = "Comprar";
+
+            cardCardBody.appendChild(title);
+            cardCardBody.appendChild(price);
+            cardCardBody.appendChild(buyButton);
+            card.appendChild(img);
+            card.appendChild(cardCardBody);
+
+            col.appendChild(card);
+            linhaContainer.appendChild(col);
+        }
+
+        cardBody.appendChild(linhaContainer);
+
+        // Adiciona uma linha horizontal entre conjuntos de colunas
+        if (linha < numLinhas - 1) {
+            var hr = document.createElement("hr");
+            hr.className = "my-4";
+            cardBody.appendChild(hr);
+        }
+    }
+
+    categoriaCard.appendChild(cardBody);
+
+    // Adiciona o card da categoria ao container de categorias
+    categoriasContainer.appendChild(categoriaCard);
+}

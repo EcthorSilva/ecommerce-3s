@@ -49,6 +49,7 @@ function exibirCarrinho() {
         btnDiminuir.onclick = function () {
             var quantidadeInput = divQuantidade.querySelector('input[type=number]');
             var novaQuantidade = parseInt(quantidadeInput.value) - 1;
+
             if (novaQuantidade <= 0) {
                 // Se a nova quantidade for menor ou igual a 0, remova o produto do carrinho e atualize o valor total
                 var divRow = divQuantidade.closest(".row");
@@ -56,9 +57,23 @@ function exibirCarrinho() {
                 carrinho.removeChild(hr);
                 console.log("Produto removido:", produto.nome);
 
+                // Atualiza o carrinho removendo o produto
+                carrinhoItens = carrinhoItens.filter(function (item) {
+                    return item.nome !== produto.nome;
+                });
+
+                // Atualiza o localStorage
+                localStorage.setItem("carrinho", JSON.stringify(carrinhoItens));
+
                 atualizaOsValores(); // Atualiza os valores do resumo
             } else {
                 quantidadeInput.value = novaQuantidade;
+
+                // Atualiza a quantidade no objeto produto
+                produto.quantidade = novaQuantidade;
+
+                // Atualiza o carrinho no localStorage
+                localStorage.setItem("carrinho", JSON.stringify(carrinhoItens));
             }
         };
 
