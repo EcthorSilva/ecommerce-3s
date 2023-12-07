@@ -168,12 +168,27 @@ function atualizaOsValores() {
     var valorVista = totalProdutos * 0.7;
     var valorParcela = totalProdutos / 10;
 
+    console.log("Valor à prazo:", valorPrazo);
+    console.log("Valor à vista:", valorVista);
+    console.log("Valor da parcela:", valorParcela);
+
     // Atualizar os elementos no HTML com o novo valor
     document.querySelector("ul.list-group li:nth-child(1) span").textContent = "R$ " + formatarNumero(totalProdutos);
     document.querySelector("ul.list-group li:nth-child(3) span").textContent = "R$ " + formatarNumero(valorPrazo);
     document.querySelector("ul.list-group li:nth-child(5) span").textContent = "R$ " + formatarNumero(valorVista);
     document.querySelector(".list-cust span").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
+
+    // Salvar os valores no localStorage
+    salvarValoresLocalStorage(valorPrazo, valorVista, valorParcela);
 }
+
+// Função para salvar valores no localStorage
+function salvarValoresLocalStorage(prazo, vista, parcela) {
+    localStorage.setItem('valorPrazo', prazo);
+    localStorage.setItem('valorVista', vista);
+    localStorage.setItem('valorParcela', parcela);
+}
+
 // Formata os valores do carrinho para o padrão brasileiro
 function formatarNumero(numero) {
     return numero.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });

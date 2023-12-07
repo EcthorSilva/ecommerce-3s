@@ -235,7 +235,7 @@ for (var categoria in produtosPorCategoria) {
         // Adiciona uma linha horizontal entre conjuntos de colunas
         if (linha < numLinhas - 1) {
             var hr = document.createElement("hr");
-            hr.className = "my-4";
+            hr.className = "my-4 text-muted";
             cardBody.appendChild(hr);
         }
     }
