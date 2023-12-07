@@ -104,6 +104,7 @@ containers.forEach(function (container) {
         btnAddToCart.addEventListener("click", function () {
             // Adiciona o produto ao carrinho
             adicionarAoCarrinho(produto, 1);
+            mostrarPopup();
         });
 
         // Adicione os elementos HTML ao DOM
@@ -244,4 +245,13 @@ for (var categoria in produtosPorCategoria) {
 
     // Adiciona o card da categoria ao container de categorias
     categoriasContainer.appendChild(categoriaCard);
+}
+
+function mostrarPopup() {
+    $('#popupModal').modal('show');
+
+    // Define um timeout de 2 segundos
+    setTimeout(function() {
+        $('#popupModal').modal('hide');
+    }, 2000);
 }
