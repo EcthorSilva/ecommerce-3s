@@ -117,7 +117,13 @@ function exibirCarrinho() {
             // Remove o item do carrinho
             carrinho.removeChild(divRow);
             carrinho.removeChild(hr);
-            console.log("Produto removido:", produto.nome);
+            // Atualiza o carrinho removendo o produto
+            carrinhoItens = carrinhoItens.filter(function (item) {
+                return item.nome !== produto.nome;
+            });
+
+            // Atualiza o localStorage
+            localStorage.setItem("carrinho", JSON.stringify(carrinhoItens));
 
             atualizaOsValores(); // Atualiza os valores do resumo
         });
@@ -174,8 +180,8 @@ function atualizaOsValores() {
 
     // Atualizar os elementos no HTML com o novo valor
     document.querySelector("ul.list-group li:nth-child(1) span").textContent = "R$ " + formatarNumero(totalProdutos);
-    document.querySelector("ul.list-group li:nth-child(3) span").textContent = "R$ " + formatarNumero(valorPrazo);
-    document.querySelector("ul.list-group li:nth-child(5) span").textContent = "R$ " + formatarNumero(valorVista);
+    document.querySelector("ul.list-group li:nth-child(4) span").textContent = "R$ " + formatarNumero(valorPrazo);
+    document.querySelector("ul.list-group li:nth-child(7) span").textContent = "R$ " + formatarNumero(valorVista);
     document.querySelector(".list-cust span").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
 
     // Salvar os valores no localStorage

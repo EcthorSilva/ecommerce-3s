@@ -10,7 +10,7 @@ function recuperarValoresLocalStorage() {
 
     // Atualizar os elementos no HTML com o novo valor
     document.querySelector("ul.list-group li:nth-child(1) span").textContent = "R$ " + formatarNumero(valorPrazo);
-    document.querySelector("ul.list-group li:nth-child(3) span").textContent = "R$ " + formatarNumero(valorPrazo);
+    document.querySelector("ul.list-group li:nth-child(4) span").textContent = "R$ " + formatarNumero(valorPrazo);
     document.querySelector("ul.list-group li:nth-child(4) span").textContent = "R$ " + formatarNumero(valorVista);
     document.querySelector(".list-cust span").textContent = "(em até 10x de R$ " + formatarNumero(valorParcela) + " sem juros)";
 }
